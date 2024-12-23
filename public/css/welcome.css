@@ -1,0 +1,80 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: futura, sans-serif;
+    background: #AECBD6; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff; /* White background for the box */
+    padding: 2rem;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Heading Styling */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #374151; /* Dark gray for heading */
+    margin-bottom: 1rem;
+}
+
+/* Subtitle Styling */
+.subtitle {
+    font-size: 1rem;
+    color: #6b7280; /* Gray for subtitle */
+    margin-bottom: 2rem;
+}
+
+.explanation {
+    font-size: 0.9rem; /* Slightly smaller than the subtitle */
+    color: #6b7280; /* Gray text for subtlety */
+    margin-top: 1rem; /* Add some space above */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Button Styling */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login {
+    background: #4f46e5; /* Indigo */
+    color: #ffffff;
+    border: none;
+}
+
+.btn-login:hover {
+    background: #4338ca; /* Darker Indigo */
+}
+
+.btn-register {
+    background: #10b981; /* Green */
+    color: #ffffff;
+    border: none;
+}
+
+.btn-register:hover {
+    background: #059669; /* Darker Green */
+}
