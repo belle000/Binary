@@ -34,16 +34,14 @@
             <ul id="book-list" class="divide-y divide-gray-200">
                 @foreach ($books as $book)
                     <li class="py-4">
-                        <h2 class="text-lg font-semibold text-gray-800">{{ $book->title }}</h2>
+                        <h2 class="text-lg font-semibold text-gray-800 truncate w-64">{{ $book->title }}</h2>
                         <p class="text-gray-600 text-sm mb-2">
                             {{ $book->subject ? $book->subject->name : 'No Subject Assigned' }}
                         </p>
                         @if ($book->address)
                             <a href="{{ $book->address }}"
                                 class="text-white bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 transition"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >
+                                target="_blank" rel="noopener noreferrer">
                                 Download Link
                             </a>
                         @else
@@ -51,10 +49,9 @@
                         @endif
 
                         <!-- Hidden data for JavaScript -->
-                        <span class="book-data hidden"
-                              data-title="{{ $book->title }}"
-                              data-subject="{{ $book->subject ? $book->subject->name : 'No Subject Assigned' }}"
-                              data-address="{{ $book->address ?? 'No Address Available' }}">
+                        <span class="book-data hidden" data-title="{{ $book->title }}"
+                            data-subject="{{ $book->subject ? $book->subject->name : 'No Subject Assigned' }}"
+                            data-address="{{ $book->address ?? 'No Address Available' }}">
                         </span>
                     </li>
                 @endforeach

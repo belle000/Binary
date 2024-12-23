@@ -21,18 +21,16 @@
                 @foreach ($books as $book)
                     <li class="py-4 flex justify-between items-center">
                         <div>
-                            <h2 class="text-lg font-semibold text-gray-800">{{ $book->title }}</h2>
+                            <h2 class="text-lg font-semibold text-gray-800 truncate w-96">{{ $book->title }}</h2>
                             <p class="text-sm text-gray-600">
                                 {{ $book->subject ? $book->subject->name : 'No Subject Assigned' }}
                             </p>
                         </div>
                         @if ($book->address)
-                            <a
-                                href="{{ url('books/' . $book->address) }}"
+                            <a href="{{ $book->address }}"
                                 class="text-white bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 transition"
-                                download
-                            >
-                                Download
+                                target="_blank" rel="noopener noreferrer">
+                                Download Link
                             </a>
                         @else
                             <span class="text-red-500">No PDF available</span>
@@ -46,10 +44,8 @@
 
         <!-- Back Button -->
         <div class="mt-6">
-            <a
-                href="{{ route('semester', ['id' => $subject->semester->major_id, 'semester' => $subject->semester->number]) }}"
-                class="text-blue-500 hover:underline"
-            >
+            <a href="{{ route('semester', ['id' => $subject->semester->major_id, 'semester' => $subject->semester->number]) }}"
+                class="text-blue-500 hover:underline">
                 Back to Subjects
             </a>
         </div>
