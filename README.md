@@ -1,5 +1,5 @@
 # Binary
-*Effortlessly Manage Binary Data Processing*
+*e-library platform designed specifically for Computer Science students enrolled in BINUS University*
 
 ![last-commit](https://img.shields.io/github/last-commit/belle000/binary?style=flat&logo=git&logoColor=white&color=0080ff)
 ![repo-top-language](https://img.shields.io/github/languages/top/belle000/binary?style=flat&color=0080ff)
